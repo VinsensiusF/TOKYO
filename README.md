@@ -8,10 +8,9 @@
 
 ![Local AI](https://img.shields.io/badge/AI-100%25%20local-6f42c1)
 ![Languages](https://img.shields.io/badge/speaks-🇮🇩%20🇬🇧%20🇪🇸-0a7cff)
-![Cost](https://img.shields.io/badge/per%20message%20cost-€0-2ea44f)
 ![Docker](https://img.shields.io/badge/runs%20in-Docker-2496ed)
 
-[Meet TOKYO](#-meet-tokyo) · [See it in action](#-see-it-in-action) · [Get your own](#-get-your-own-tokyo-in-20-minutes) · [How it works](#-how-it-works) · [FAQ](#-faq)
+[Meet TOKYO](#-meet-tokyo) · [See it in action](#-see-it-in-action) · [Getting started](#-getting-started) · [How it works](#-how-it-works) · [FAQ](#-faq)
 
 </div>
 
@@ -105,29 +104,24 @@ Speak in Indonesian, English or Spanish, and TOKYO **answers in the same languag
 
 ---
 
-## 💚 Why you'll like it
+## 🧭 What TOKYO stands for
+
+A few principles shaped every decision in TOKYO, including the ones that made it slower or harder to build.
 
 | | |
 |---|---|
-| 🔒 **Your data stays home** | The AI, speech recognition and voice run on *your* machine. Your emails are summarized locally, never sent to an AI company. |
-| 🗣️ **Talk, don't type** | Send a voice note, get a voice reply. It hears which language you speak and switches automatically. |
-| 📅 **Never wrong about your schedule** | Class times and rooms are read straight from Google Calendar by code, not "remembered" by an AI. Instant and exact. |
-| 📬 **Inbox triage** | Important emails first, promotions filtered out, phishing-style emails flagged. Read-only: it can't send or delete anything. |
-| 🌦️ **Dress for the day** | Live forecast turned into actual clothing advice. |
-| 🔎 **Looks things up** | Opening hours, events, prices: it reads the web page and tells you its source. |
-| 💶 **No subscription** | Open models, free APIs. The 1,000th question costs the same as the first: nothing. |
+| 🔒 **Privacy by default** | Your emails, calendar and voice are processed on your own machine. Nothing is sent to an AI company. |
+| 🎯 **Accuracy over eloquence** | When an answer must be exact, like class times and rooms, code reads it straight from your calendar. The AI only writes what can afford to sound human. |
+| 🤝 **Honest about its limits** | If the calendar is unreachable or a search finds nothing, TOKYO says so instead of guessing. Web answers name their source. |
+| 🛡️ **Least privilege** | Email is read-only. The calendar is only written to when you ask. Access is locked to you by password and chat ID. |
+| 🗣️ **Your language, not its own** | It follows the language you speak, from one sentence to the next. |
+| 🏠 **Yours to own** | Open models, free services, no subscription. It runs on hardware you control, and you can switch it off or remove it completely at any time. |
 
 ---
 
-<div align="center">
+## 🚀 Getting started
 
-### Convinced? Here's how to get your own. 👇
-
-</div>
-
-## 🚀 Get your own TOKYO in ~20 minutes
-
-This guide is for anyone, including friends who want their own copy. You'll connect **your own** Google account. You never need the author's files, and the author can never see your data.
+Setting up your own TOKYO takes about 20 minutes. You'll connect **your own** Google account. You never need the author's files, and the author can never see your data.
 
 > 🔐 **Your TOKYO is completely separate.** Cloning gives you the *code* (the blueprint), not anyone's *keys*. Your calendar access is created when **you** log in with **your** Google account, and it lives only on your computer. Never share your `.env` or `secrets/` folder, and never ask anyone for theirs.
 
@@ -371,7 +365,7 @@ Schedules, email and weather stay just as accurate, because code handles them. O
 
 **Not yet.** One installation = one person (one Google login, one password).
 
-For now, each person runs their own copy (see [Get your own TOKYO](#-get-your-own-tokyo-in-20-minutes)). Multi-user support is on the roadmap.
+For now, each person runs their own copy (see [Getting started](#-getting-started)). Multi-user support is on the roadmap.
 
 </details>
 
@@ -579,8 +573,6 @@ Logs: `docker compose logs --tail 50 web` (or `bot`, `ollama`).
 
 <div align="center">
 
-**Built in Madrid, one bug at a time.** ⚡
-
-If TOKYO helps you, give it a ⭐ and tell a friend. They'll get their own TOKYO, with their own keys.
+<sub>Built in Madrid, one bug at a time.</sub>
 
 </div>
