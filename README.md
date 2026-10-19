@@ -288,26 +288,106 @@ That's why schedule answers are instant (~0.1 s): the fastest, most accurate AI 
 
 ## ❓ FAQ
 
-**If my friend clones TOKYO, can they see or change my calendar?**
-No. The repository contains only code. Calendar access comes from a token created when *you* log in, stored in your `secrets/` folder, which is never uploaded to Git. Your friend's TOKYO gets a token for *their* account only.
+Click a question to open it.
 
-**Can TOKYO send, delete or modify my emails?**
-No. It uses Gmail's `readonly` permission. The only thing it can write is new events in your calendar, and only when you ask.
+<details>
+<summary><b>🔐 If my friend clones TOKYO, can they see or change my calendar?</b></summary>
 
-**Does anything go to the cloud?**
-The AI model, speech recognition and voice all run locally. Outside calls are limited to Google's APIs (your own calendar and email), Open-Meteo (weather), Telegram (if you use it) and web searches you explicitly ask for.
+<br>
 
-**How fast is it?**
-Schedules: instant. AI answers: roughly 15–40 seconds on a CPU, depending on your machine. The first answer after starting takes about a minute.
+**No.** The repository only contains code, never keys.
 
-**My computer only has 8 GB RAM.**
-Use the smaller model: set `LLM_MODEL=qwen2.5:3b` in `.env` and run `docker compose exec ollama ollama pull qwen2.5:3b`. Schedules, email and weather stay accurate (code handles them); web answers get weaker.
+- Calendar access comes from a token created when **you** log in with **your** Google account.
+- That token lives in your `secrets/` folder, which is never uploaded to Git.
+- Your friend's TOKYO creates its own token, for **their** account only.
 
-**Can several people share one TOKYO server?**
-Not yet. It's built for one person: one Google token, one password. Multi-user support is on the roadmap.
+</details>
 
-**Is the web app safe to put online?**
-Only behind HTTPS with a strong `WEB_PASSWORD`. Anyone with that password can read your calendar and email through it, so never share it.
+<details>
+<summary><b>📬 Can TOKYO send, delete or change my emails?</b></summary>
+
+<br>
+
+**No.** Gmail access is **read-only**.
+
+- ✅ It can read and summarize your inbox.
+- ❌ It can't send, delete, archive or modify anything.
+- ✍️ The only thing TOKYO ever writes is a new calendar event, and only when you ask.
+
+</details>
+
+<details>
+<summary><b>☁️ Does anything go to the cloud?</b></summary>
+
+<br>
+
+**The AI itself never leaves your machine.**
+
+| Runs on your machine | Talks to the internet |
+|---|---|
+| 🧠 AI model (Qwen) | 📅 Google APIs: your own calendar and email |
+| 👂 Speech recognition (Whisper) | 🌦️ Open-Meteo: weather |
+| 🗣️ Voice (Piper) | 💬 Telegram: only if you use it |
+| | 🔎 Web search: only when you ask |
+
+</details>
+
+<details>
+<summary><b>⏱️ How fast is it?</b></summary>
+
+<br>
+
+| Question type | Typical time |
+|---|---|
+| 📅 Schedule | Instant (~0.1 s) |
+| 💬 Chat, weather, email | 15–40 s on a CPU |
+| 🔎 Web search | A bit longer: it reads the pages first |
+| 🚀 First answer after starting | ~1 minute (the AI is loading) |
+
+</details>
+
+<details>
+<summary><b>💻 My computer only has 8 GB RAM. Can I still use it?</b></summary>
+
+<br>
+
+**Yes,** with the smaller model:
+
+1. In `.env`, set `LLM_MODEL=qwen2.5:3b`
+2. Run:
+   ```bash
+   docker compose exec ollama ollama pull qwen2.5:3b
+   docker compose up -d web bot
+   ```
+
+Schedules, email and weather stay just as accurate, because code handles them. Only web-search answers get weaker.
+
+</details>
+
+<details>
+<summary><b>👥 Can several people share one TOKYO server?</b></summary>
+
+<br>
+
+**Not yet.** One installation = one person (one Google login, one password).
+
+For now, each person runs their own copy (see [Get your own TOKYO](#-get-your-own-tokyo-in-20-minutes)). Multi-user support is on the roadmap.
+
+</details>
+
+<details>
+<summary><b>🌐 Is it safe to put the web app online?</b></summary>
+
+<br>
+
+**Yes, if you do both:**
+
+- ✅ Serve it over **HTTPS** (Caddy does this automatically on a VPS).
+- ✅ Set a **strong `WEB_PASSWORD`**.
+
+⚠️ Anyone who knows that password can read your calendar and email through TOKYO, so never share it.
+
+</details>
 
 ---
 
