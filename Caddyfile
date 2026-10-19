@@ -1,0 +1,5 @@
+# Replace with your domain; Caddy gets the HTTPS certificate automatically.
+# HTTPS is required: browsers only allow the microphone on secure pages.
+tokyo.yourdomain.com {
+    reverse_proxy web:8501
+}

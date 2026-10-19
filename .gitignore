@@ -1,0 +1,9 @@
+.env
+secrets/
+token.json
+credentials.json
+venv/
+voices/
+__pycache__/
+*.mp3
+.DS_Store

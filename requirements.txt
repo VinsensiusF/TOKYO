@@ -1,0 +1,20 @@
+# web
+streamlit>=1.40
+streamlit-folium
+folium
+geopy
+# telegram
+python-telegram-bot>=21
+# brain + context
+requests
+python-dotenv
+tzdata
+langdetect
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+# voice (all local, CPU)
+faster-whisper>=1.0
+piper-tts>=1.3
+ddgs
+trafilatura
