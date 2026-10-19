@@ -11,17 +11,55 @@
 ![Cost](https://img.shields.io/badge/per%20message%20cost-€0-2ea44f)
 ![Docker](https://img.shields.io/badge/runs%20in-Docker-2496ed)
 
-[See it in action](#-see-it-in-action) · [Get your own TOKYO](#-get-your-own-tokyo-in-20-minutes) · [How it works](#-how-it-works) · [FAQ](#-faq)
+[Meet TOKYO](#-meet-tokyo) · [See it in action](#-see-it-in-action) · [Get your own](#-get-your-own-tokyo-in-20-minutes) · [How it works](#-how-it-works) · [FAQ](#-faq)
 
 </div>
 
 ---
 
+## 👋 Meet TOKYO
+
+TOKYO is a personal assistant that lives on **your own computer**, not in someone else's cloud. Think of it as a pocket chief of staff: it keeps track of where you need to be, what's waiting in your inbox and what the sky is about to do, and tells you in whichever language you happen to be thinking in.
+
+| | |
+|---|---|
+| 🪪 **Name** | **T**racks **O**bligations, **K**eeps **Y**ou **O**n-time |
+| 🚄 **Named after** | Tokyo's trains: punctual, precise, and you never have to think about how they work |
+| 🗣️ **Speaks** | 🇮🇩 Bahasa Indonesia · 🇬🇧 English · 🇪🇸 Español, and switches the moment you do |
+| 📱 **Where to find it** | Telegram (text or voice notes) and a web app |
+| 🧠 **Knows** | Your Google Calendar, your Gmail inbox, today's weather, and the web |
+| 😎 **Personality** | Casual, tactical, to the point: a friend who happens to have your timetable memorized |
+| 🏠 **Lives** | On your laptop or your own server. Its AI brain, ears and voice all run locally |
+| 🚫 **Won't** | Send or delete your emails, share your data, or make up your schedule |
+| 🎂 **Born** | Madrid, 2026, for a Master's student juggling classes in three languages |
+
+### A day with TOKYO
+
+- **08:10** — Still in bed: 🎙️ *"Besok… eh, hari ini ada kelas apa?"* Classes, times and rooms, read out loud in Indonesian.
+- **08:15** — *"What should I wear?"* Rain at 98%: waterproof jacket and an umbrella.
+- **12:40** — Between lectures, a Spanish classmate asks about Wednesday. You ask TOKYO in Spanish; it answers in Spanish, midterm included.
+- **18:30** — *"Cek emailku, ada yang penting?"* Two emails worth reading, one flagged as a possible phishing attempt.
+- **21:00** — *"Tambahkan deadline Essay AI tanggal 30"* — and it's in your calendar.
+
+---
+
+## 💡 Why TOKYO exists
+
+Studying abroad means juggling a timetable spread across rooms like MMB-602 and MMB-703, an inbox mixing university deadlines with promotions and security alerts, and a city where the weather decides between a coat and an umbrella. The information is all there, just scattered across apps and three languages.
+
+The first TOKYO was a Streamlit dashboard on Gemini. It worked, but:
+
+- **Privacy:** an assistant that reads your email shouldn't send it to a cloud AI.
+- **Reliability:** the old code kept a list of five fallback models because servers were often busy. An assistant that sometimes isn't there isn't an assistant.
+- **Learning:** building it locally means understanding every layer: speech, language detection, tool calling, OAuth, Docker. One API call teaches one thing; TOKYO teaches the whole stack.
+
+---
+
 ## 🎬 See it in action
 
-> 🎙️ *"Besok aku ada kelas apa?"*
+**🎙️ You:** *"Besok aku ada kelas apa?"*
 
-```
+```text
 📅 Jadwalmu:
 Senin 19/10 (BESOK):
   - 09:00-10:20 DATA MANAGEMENT I (Ses. 8) MMB-602
@@ -29,19 +67,39 @@ Senin 19/10 (BESOK):
   - 15:30-16:50 IS-RELATIONAL DATABASES-SQL LAB (Ses. 4) MMB-303
 ```
 
-> 🎙️ *"¿Qué tengo el miércoles?"* → answers in Spanish, with `miércoles 21/10` and the right room for every class.
+**🎙️ You:** *"¿Qué tengo el miércoles?"*
 
-> 💬 *"What should I wear today?"*
->
-> **TOKYO:** Bring a jacket or a light sweater. It's a bit chilly with a high chance of rain, so a waterproof coat or umbrella would be wise. 🔊
+```text
+📅 Tu horario:
+miércoles 21/10:
+  - 09:00-10:20 DATA MANAGEMENT I (Ses. 9) MMB-602
+  - 10:30-11:50 INTRODUCTION TO AI AND MACHINE LEARNING (Ses. 9) MMB-602
+  - 15:00-16:20 PROGRAMMING LAB (Ses. 2) MMB-703
+```
 
-> 💬 *"Cek emailku dong, ada yang penting?"*
->
-> **TOKYO:** Ada 2 email penting: undangan dari kampus untuk career forum, dan permintaan verifikasi akun. ⚠️ Untuk yang kedua, cek langsung di aplikasi resminya, jangan klik link di email.
+**💬 You:** *"What should I wear today?"*
 
-> 💬 *"Search the opening hours of Museo del Prado"*
->
-> **TOKYO:** Monday to Saturday 10:00–20:00, Sundays and holidays 10:00–19:00. Source: the page it actually read.
+```text
+🧥 Bring a jacket or a light sweater. It's a bit chilly with a high
+   chance of rain, so a waterproof coat or umbrella would be wise.
+```
+
+**💬 You:** *"Cek emailku dong, ada yang penting?"*
+
+```text
+📬 Ada 2 email penting:
+  1. Undangan dari kampus untuk career forum.
+  2. Permintaan verifikasi akun.
+     ⚠️ Cek langsung di aplikasi resminya, jangan klik link di email.
+```
+
+**💬 You:** *"Search the opening hours of Museo del Prado"*
+
+```text
+🔎 Monday to Saturday: 10:00-20:00
+   Sundays and holidays: 10:00-19:00
+   Source: the website TOKYO just read
+```
 
 Speak in Indonesian, English or Spanish, and TOKYO **answers in the same language, out loud**, on Telegram or in your browser.
 
@@ -60,6 +118,12 @@ Speak in Indonesian, English or Spanish, and TOKYO **answers in the same languag
 | 💶 **No subscription** | Open models, free APIs. The 1,000th question costs the same as the first: nothing. |
 
 ---
+
+<div align="center">
+
+### Convinced? Here's how to get your own. 👇
+
+</div>
 
 ## 🚀 Get your own TOKYO in ~20 minutes
 
@@ -168,20 +232,6 @@ docker compose down -v              # remove TOKYO and its downloaded models
 ```
 
 To revoke TOKYO's access to your Google account at any time: **[myaccount.google.com/permissions](https://myaccount.google.com/permissions)**.
-
----
-
-## 💡 Why TOKYO exists
-
-Studying abroad means juggling a timetable spread across rooms like MMB-602 and MMB-703, an inbox mixing university deadlines with promotions and security alerts, and a city where the weather decides between a coat and an umbrella. The information is all there, just scattered across apps and three languages.
-
-The first TOKYO was a Streamlit dashboard on Gemini. It worked, but:
-
-- **Privacy:** an assistant that reads your email shouldn't send it to a cloud AI.
-- **Reliability:** the old code kept a list of five fallback models because servers were often busy. An assistant that sometimes isn't there isn't an assistant.
-- **Learning:** building it locally means understanding every layer: speech, language detection, tool calling, OAuth, Docker. One API call teaches one thing; TOKYO teaches the whole stack.
-
-The name? A good assistant should be like Tokyo's trains: punctual, precise, and you never think about how it works.
 
 ---
 
