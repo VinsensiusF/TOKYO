@@ -4,7 +4,7 @@
 
 ### Your private AI assistant that knows your classes, reads your inbox and talks back in your language.
 
-**T**racks **O**bligations, **K**eeps **Y**ou **O**n-time
+**T**he **O**ne **K**eeping **Y**ou **O**rganized
 
 ![Local AI](https://img.shields.io/badge/AI-100%25%20local-6f42c1)
 ![Languages](https://img.shields.io/badge/speaks-🇮🇩%20🇬🇧%20🇪🇸-0a7cff)
@@ -22,7 +22,7 @@ TOKYO is a personal assistant that lives on **your own computer**, not in someon
 
 | | |
 |---|---|
-| 🪪 **Name** | **T**racks **O**bligations, **K**eeps **Y**ou **O**n-time |
+| 🪪 **Name** | **T**he **O**ne **K**eeping **Y**ou **O**rganized |
 | 🚄 **Named after** | Tokyo's trains: punctual, precise, and you never have to think about how they work |
 | 🗣️ **Speaks** | 🇮🇩 Bahasa Indonesia · 🇬🇧 English · 🇪🇸 Español, and switches the moment you do |
 | 📱 **Where to find it** | Telegram (text or voice notes) and a web app |
